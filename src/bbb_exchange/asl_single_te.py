@@ -22,7 +22,7 @@ Output:
 - nifti images of the fitted CBF, ATT, ABV and ATT_A data for the extended model
 - print values in csv file (optional)
 """
-from core.config_manager import ConfigManager
+from bbb_exchange.core.config_manager import ConfigManager
 
 config = ConfigManager("config.json").load()
 def create_parameter_config_from_config():
