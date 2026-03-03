@@ -22,9 +22,9 @@ Output:
 - nifti images of the fitted CBF, ATT, ABV and ATT_A data for the extended model
 - print values in csv file (optional)
 """
+from core.config_manager import ConfigManager
 
-with open("config.json", "r") as file:
-		config = json.load(file)
+config = ConfigManager("config.json").load()
 def create_parameter_config_from_config():
 	"""
 	Create parameter configuration from config.py

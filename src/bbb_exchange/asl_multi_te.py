@@ -4,8 +4,9 @@ from data_handling import load_nifti_file, load_json_metadata, save_nifti
 from fitting_multi_te import ls_fit_volume_multite, prepare_multite_data
 from fitting_multi_te import bayesian_fit_volume_multite, create_multite_bayesian_config
 import json
-with open("config.json", "r") as file:
-		config = json.load(file)
+from core.config_manager import ConfigManager
+
+config = ConfigManager("config.json").load()
 
 """
 Multi-TE ASL Processing Script with Bayesian Fitting
